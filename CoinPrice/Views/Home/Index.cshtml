@@ -1,0 +1,88 @@
+﻿@model CoinPrice.Models.viewModel
+@{
+    ViewBag.Title = "Home Page";
+}
+
+<br />
+<br />
+
+
+<ul class="nav nav-tabs text-center border-dark bg-dark rounded-top" id="myTab" role="tablist">
+    <li class="nav-item col-6 m-0 p-0 rounded-top">
+        <a class="nav-link active" id="digital-tab" data-toggle="tab" href="#digital" role="tab" aria-controls="digital" aria-selected="true">قیمت ارز دیجیتال</a>
+    </li>
+    <li class="nav-item col-6 m-0 p-0 rounded-top">
+        <a class="nav-link" id="arz-tab" data-toggle="tab" href="#arz" role="tab" aria-controls="arz" aria-selected="false">قیمت ارز در ایران</a>
+    </li>
+
+</ul>
+<div class="tab-content" id="myTabContent">
+    <div class="tab-pane fade show active" id="digital" role="tabpanel" aria-labelledby="digital-tab">
+        <table class="table table-striped table-dark text-center">
+
+            <thead dir="rtl">
+                <tr>
+                    <th scope="col" style="width:20px">شماره</th>
+                    <th scope="col">نام ارز</th>
+                    <th scope="col">قیمت (دلار)</th>
+                    <th scope="col">قیمت (تومان)</th>
+                    <th scope="col">درصد تغییر در یک ساعت</th>
+                    <th scope="col">درصد تغییر در 24 ساعت</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model.digital)
+                {
+                    double hour1 = double.Parse(item.quote.USD.percent_change_1h.ToString("0.00"));
+                    double hour24 = double.Parse(item.quote.USD.percent_change_24h.ToString("0.00"));
+                    <tr>
+                        <th scope="row" class="border-right ">@item.cmc_rank</th>
+                        <td>@item.name  (@item.symbol)</td>
+                        <td>$ @item.quote.USD.price.ToString("0.000")</td>
+                        <td><span class="price">@item.quote.USD.price.toRial(Model.arz.First().price)</span></td>
+                        <td style="@if (hour1 > 0) {<text>color:#0f0</text> } else if (hour1 < 0) { <text>color:#ff2f2f</text> } "><b>@hour1 %</b></td>
+                        <td class="@if (hour24 > 0) {<text>text-success</text> } else if (hour24 < 0) { <text>text-danger</text> } "><b>@hour24 %</b></td>
+
+                    </tr>
+                }
+            </tbody>
+
+        </table>
+    </div>
+    <div class="tab-pane fade" id="arz" role="tabpanel" aria-labelledby="arz-tab">
+        <table class="table table-striped table-dark text-right rounded-bottom" dir="rtl">
+
+            <thead>
+                <tr>
+                    <th scope="col">شماره</th>
+                    <th scope="col">نام ارز</th>
+                    <th scope="col">قیمت (ریال)</th>
+                    <th scope="col">درصد تغییر</th>
+                    <th scope="col">میزان تغییر</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model.arz)
+                {
+                    <tr>
+                        <th scope="row">@item.id</th>
+                        <td>@item.nameFa</td>
+                        <td class="price">@item.price</td>
+                        <td>@item.changePercent</td>
+                        <td class="price">@item.changePrice</td>
+                    </tr>
+                }
+            </tbody>
+
+        </table>
+    </div>
+
+</div>
+
+
+@section scripts{
+    <script src="~/Scripts/simple.money.format.js"></script>
+    <script>
+        $('.price').simpleMoneyFormat();
+    </script>
+}

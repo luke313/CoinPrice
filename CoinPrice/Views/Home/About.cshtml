@@ -1,0 +1,44 @@
+﻿@model IEnumerable<CoinPrice.Moduols.Datum>
+
+@{
+    ViewBag.Title = "About";
+}
+
+<br />
+<br />
+
+<table class="table table-striped table-dark text-center" >
+
+    <thead dir="rtl">
+        <tr>
+            <th scope="col" style="width:20px">شماره</th>
+            <th scope="col">نام ارز</th>
+            <th scope="col">قیمت (دلار)</th>
+            <th scope="col">درصد تغییر در یک ساعت</th>
+            <th scope="col">درصد تغییر در 24 ساعت</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            double hour1 = double.Parse(item.quote.USD.percent_change_1h.ToString("0.00"));
+            double hour24 = double.Parse(item.quote.USD.percent_change_24h.ToString("0.00"));
+            <tr>
+                <th scope="row" class="border-right ">@item.cmc_rank</th>
+                <td>@item.name  (@item.symbol)</td>
+                <td>$ @item.quote.USD.price.ToString("0.000")</td>
+                <td class="@if (hour1 > 0) {<text>text-success</text> } else if (hour1 < 0) { <text>text-danger</text> } ">@hour1 %</td>
+                <td class="@if (hour24 > 0) {<text>text-success</text> } else if (hour24 < 0) { <text>text-danger</text> } ">@hour24 %</td>
+                
+            </tr>
+        }
+    </tbody>
+
+</table>
+
+@section scripts{
+    <script src="~/Scripts/simple.money.format.js"></script>
+    <script>
+        $('.price').simpleMoneyFormat();
+    </script>
+}

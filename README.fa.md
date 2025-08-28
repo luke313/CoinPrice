@@ -1,33 +1,36 @@
-#  التالال تهوانيا الالللا، مااناتلنيلي CoinPrice
+# أران coinPrice
 
-project **CoinPrice** (&lt;asp.NET MVC&gt;) yak aplicasion Web ast ke jihat to show prices arz dijital i darlar va iral. vashed hod marat baraay rial araha cjand carha ra nes nesbi coneh bedahid bashad mi hast.
+[#️ English Version ](./README.md)
+Project **CoinPrice** (&lt;asp.NET MVC&gt;) yak aplicasion Web ast ke jihat to show prices arz dijital va i dollar ve ri�l (val) be real neshan de.
 
-Tu mi cholo dhat barja be dollar v iral ast ta taghyr koni.
+In project be manaze li baray monitoring alzani i iran te kurerha.
 
 
-## kêwiéthas
+## أران kannathaj
 !
-- Taske asasi mini bara monitoring price arzy digjital be dolar te iral.
-- Mini bary bara monitoring price arzy foreign te rial.
-- Asan be vorse consul az Views va HTML baraye nahai show shod.
-- Entity Framework baraye etessal ba database connection.
+- Track asil dastan baraye araz dijital te dollar ve rial.
+- Track asil monitoring aras te foreign crurrency be ri�.
+- Fil ha-View and Razor saszhi baraye.
+- Entity Framework baraye alaghe be database.
 
-## Taskha'
+## Тراد carrhaha
+HomeController: Noqte vorudi aslii bash sit keh dateha azo g krifta mideh.
 
-HomeController: Markaze achas easliā ke dateha ra azayi grafte ta bash ra dolar ve irql araie neshon mideh.
+ViewModel: braye anday data baray in beatarenh be ast to dekade ta View.
 
-ViewModel: baraye angasin bariie data bari nmayish be ta views.
- 
-IranArzTbl: jadval model data baray arzwha va database matrisht ra nn bede ade.
+IranArzTbl: model paydar database te information arz ra zfrahe mi khonad sakte.
 
-## Setup
+## آمتالات
+Rẅان Rah-andzazi
+1. Visual Studio ra bassh bar bar ASP.NET development hast.
+2. Fil*CoinPrice.sln* ra neshan de.
+2. Bild va erja coni project.
 
-1. Virtual Studio (Specification be asp.net) i baji nasb i nu mashin.
-2. Passh khodt \"ren\" bash.
-3. Ran te project.
+## متهوانيت
+Home Page – Links ba project – CoinPrice card va shaphe anday cena.`
 
-## Screenshots
-![HomePage](docs/images/homepage.png)
+Pagh asasi coinPrice ba show celoye arzi dijital a ve exchange az ram.
 
-\rή **CoinPrice** asan card erzha mandal ate baraye vatol dollar ve rial ro neshon medeh.
 
+## ایسملم 
+Anh project licence ndarad.

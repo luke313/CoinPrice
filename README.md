@@ -1,9 +1,9 @@
 # CoinPrice
 
-Project code named **CoinPrice** is an [ASP.NET MVC](/https://docs.microsoft.com/en-us/asp/aspnet/mvcore/fundamentals/aspnetmvc.html) application that shows live and updated prices of digital currencies and cryptocurrencies in both USD and RIP Rial.
- 
+[#️ Arabic Version (Persian) ](./README.fa.md)
+Project code named **CoinPrice** is an [ASP.NET MVC](https://docs.microsoft.com/en-us/asp/aspnet/mvcore/fundamentals/aspnetmvc.html) application that shows live and updated prices of digital currencies and cryptocurrencies in both USD and IRR Rial.
+
 The project was created to help users in Iran and elsewhere to monitor their holdings and investments.
- 
 
 ## Features 
 
@@ -23,30 +23,29 @@ The application is built using the classic [MVC architecture](https://docs.micro
 
 ## Setup
 
-to run the project you need:
-
-1. Start a Virtual Studio with (Installed [.SDNT development workload](https://developer.microsoft.com/en-us/asp/downloads)).
-
+To run the project you need:
+1. Start Visual Studio with the [ASP.NET development workload](https://visualstudio.microsoft.com/vs/).
 2. Open the *coinPrice.sln* solution file.
-
 3. Build and run the project:
 
-    msbuild //build
-    msran //run
+``bash
+msbrun //build
+msran  //run
+```
 
-## Sumport
+## Support
 
-- [Asp.Net MVC Guide](https://docs.microsoft.com/en-us/asp/aspnet/mvcore/fundamentals/aspnetmvc.aspx?view=aspmcvs)
-- [Entity Framework (EF)](https://docs.microsoft.com/en-us/ef/efx)
+- [ASP.NET MVC Guide](https://docs.microsoft.com/en-us/asp/aspnet/mvcore/overview?view=aspmvc) - [Entity Framework (EF)](https://docs.microsoft.com/en-us/ef/efx)
 
 ## Screenshots
 
-#### Home Page
+### Home Page
+
 [!Home!](docs/images/homepage.png)
 
-coinPrice home page with crypto prices and foreign currency exchange data. 
+CoinPrice home page with crypto prices and foreign currency exchange data. 
 
 
 ## License
 
-This project is not currently licensed. 
+This project is not currently licensed.

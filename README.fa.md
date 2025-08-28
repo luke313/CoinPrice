@@ -1,36 +1,39 @@
-# أران coinPrice
+# کوین‌پرایس
 
-[#️ English Version ](./README.md)
-Project **CoinPrice** (&lt;asp.NET MVC&gt;) yak aplicasion Web ast ke jihat to show prices arz dijital va i dollar ve ri�l (val) be real neshan de.
+🇬🇧 [English version](./README.md)
 
-In project be manaze li baray monitoring alzani i iran te kurerha.
+پروژه **CoinPrice** یک اپلیکیشن [ASP.NET MVC](https://docs.microsoft.com/en-us/asp/aspnet/mvc/overview) است که قیمت لحظه‌ای و به‌روز ارزهای دیجیتال و ارزهای خارجی را به دلار و ریال نمایش می‌دهد.  
+
+این پروژه به‌روز است بهیدایرال في
+
+2## ابرات کالرلاه 
+
+- ️ *HomeController**\n  - الالرل وكريايت الردريات فيت الره فيدل الراه ایان قیلابال.
+
+- ️ *IranArzTbl*  \n  - قرم مالريت الاللهت لوفيدان الالراه نيبان مدتيم فيدل.
+
+- ️ *ViewModel*  \n  - سابندانيئت الالللا، مدنفیلال نيبنياه هييئلللات فيدت
+ 
+- ️ *Views*  \n  - Views Razor baraye namaysh price arzha.  
+
+- ️ *Scripts/Content*  \n  - javascript a va CSS baray ui safarshi.  
+
+## داللمنت 
+
+ኡ Vejual Studio ra ba bar [ASP.NET development workload](https://visualstudio.microsoft.com/vs/) ejbar.  
+2. fayl *CoinPrice.sln* ra ashra baz.  
+3. bash project ra bild jeleh aje:  
+
+   msbuild //build
+   msran  //run
+
+## أرتنوان 
+
+### بداللهز 
+![️Home!](docs/images/homepage.png)
+
+safe assi CoinPrice car ba arz dijital ve arz foreign.  
 
 
-## أران kannathaj
-!
-- Track asil dastan baraye araz dijital te dollar ve rial.
-- Track asil monitoring aras te foreign crurrency be ri�.
-- Fil ha-View and Razor saszhi baraye.
-- Entity Framework baraye alaghe be database.
-
-## Тراد carrhaha
-HomeController: Noqte vorudi aslii bash sit keh dateha azo g krifta mideh.
-
-ViewModel: braye anday data baray in beatarenh be ast to dekade ta View.
-
-IranArzTbl: model paydar database te information arz ra zfrahe mi khonad sakte.
-
-## آمتالات
-Rẅان Rah-andzazi
-1. Visual Studio ra bassh bar bar ASP.NET development hast.
-2. Fil*CoinPrice.sln* ra neshan de.
-2. Bild va erja coni project.
-
-## متهوانيت
-Home Page – Links ba project – CoinPrice card va shaphe anday cena.`
-
-Pagh asasi coinPrice ba show celoye arzi dijital a ve exchange az ram.
-
-
-## ایسملم 
-Anh project licence ndarad.
+## نوالما 
+Anh project henoz licence ndarad.

@@ -41,7 +41,8 @@ msran  //run
 
 ### Home Page
 
-[!Home!](docs/images/homepage.png)
+[image demo screenshot](data:image/png;base64,
+iVBORw0KKgoAAAANSUhEUgAAGoAAAgACFYABAAIAAAGgAgAAAAzdzkAAA...)
 
 CoinPrice home page with crypto prices and foreign currency exchange data. 
 
